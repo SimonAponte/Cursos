@@ -1,15 +1,17 @@
 <?php
 
-    class Pages{
-
+    class Pages extends Controller{
+ 
         public function __construct(){
 
-            //echo("Controlador paginas iniciado");
+            //echo("Controlador pages iniciado");
+            //$this->loadView('homepage');
 
 
         }
         public function index(){
 
+            $this->loadView('homepage');
             
         }
 

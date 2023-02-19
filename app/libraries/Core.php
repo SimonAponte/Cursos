@@ -24,7 +24,7 @@
                     unset($url[0]);
 
                 }
-
+                //No me deja mostrarlo echo $this->$controladorActual;
                 require_once '../app/controllers/' . $this->controladorActual . '.php';
                 $this->controladorActual = new $this->controladorActual;
 
@@ -45,6 +45,13 @@
                 $this->parametros = ($url) ? array_values($url) : []; 
 
                 //llamar función con los parametros del array
+                call_user_func_array([$this->controladorActual, $this->metodoActual], $this->parametros);
+
+            }else{
+
+                //Aquí tampoco me deja mostrarlo echo $this->$controladorActual;
+                require_once '../app/controllers/' . $this->controladorActual . '.php';
+                $this->controladorActual = new $this->controladorActual;
                 call_user_func_array([$this->controladorActual, $this->metodoActual], $this->parametros);
 
             }
