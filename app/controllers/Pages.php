@@ -10,8 +10,12 @@
 
         }
         public function index(){
+            $data =[
 
-            $this->loadView('homepage');
+                'title' => "Bienvenido a mi pagina MVC"
+
+            ];
+            $this->loadView('homepage', $data);
             
         }
 

@@ -10,7 +10,7 @@
             return new $model();
         }
 
-        public function loadView($view, $datos = []){
+        public function loadView($view, $data = []){
 
             if(file_exists('../app/views/pages/'. $view. '.php')){
 
