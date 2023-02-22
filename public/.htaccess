@@ -1,7 +1,8 @@
 <IfModule mod_rewrite.c>
 Options -Multiviews
 RewriteEngine On
-RewriteBase /MVC/mvcframework/public
+#modificar RewriteBase con la ruta correcta antes del public de tu proyecto
+RewriteBase /MVC/mvcframework/public 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
