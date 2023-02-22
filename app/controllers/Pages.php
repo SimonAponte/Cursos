@@ -3,19 +3,17 @@
     class Pages extends Controller{
  
         public function __construct(){
+            //Example for call to models 
             $this->articlemodel = $this->loadModel('article');
-            //echo("Controlador pages iniciado");
-            //$this->loadView('homepage');
-
 
         }
         public function index(){
 
-            $articles = $this->articlemodel->getArticles();
+            $articles = $this->articlemodel->getArticles(); //Call to data of model
             $data =[
                 
                 'title' => "Bienvenido a mi pagina MVC",
-                'articles'=> $articles
+                'articles'=> $articles   //data of model in variable
 
             ];
             $this->loadView('homepage', $data);
