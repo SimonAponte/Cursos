@@ -15,7 +15,9 @@
                         <input type="email" name="email" id="email" class="form-control" required>
                         <label for="password">Escribe la contraseña</label>
                         <input type="password" name="password" id="password" class="form-control" required>
-                        <button class="btn btn-primary">Agregar</button>
+                        <button class="btn btn-primary">
+                            <i class="fa-solid fa-user-plus"></i> Agregar usuario 
+                        </button>
                         <a href="{{route('index')}}" class="btn btn-secondary">Cancelar</a>
                     </form>
                 </div>
