@@ -32,10 +32,10 @@
                                     <td>{{$item->password}}</td>
                                     <td>
                                         <form action="" method="post">
-                                            <a href="" class="btn btn-info">
+                                            <a href="{{route('show', $item->id)}}" class="btn btn-info">
                                                 <i class="fa-solid fa-list"></i> Mostrar
                                             </a>
-                                            <a href="" class="btn btn-warning">
+                                            <a href="{{route('edit', $item->id)}}" class="btn btn-warning">
                                                 <i class="fa-solid fa-pen-to-square"></i> Editar
                                             </a>
                                             <button class="btn btn-danger">

@@ -44,7 +44,8 @@ class Users extends Controller
      */
     public function show(string $id)
     {
-        //
+        $item = User::find($id);
+        return view('modules/users/show', compact('item'));
     }
 
     /**
@@ -52,7 +53,8 @@ class Users extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $item = User::find($id);
+        return view('modules/users/edit',compact('item'));
     }
 
     /**
@@ -60,7 +62,11 @@ class Users extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $item = User::find($id);
+        $item->name = $request->name;
+        $item->email = $request->email;
+        $item->password = $request->password;
+        $item->save();
     }
 
     /**
